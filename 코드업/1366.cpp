@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+
+	if (n >= 3 && n <= 99 && n % 2 == 1)
+	{
+		for (int i = 0; i < n; i++)
+		{
+			for (int l = 0; l < n; l++)
+			{
+				if (i == 0 || i == n - 1 || i == n / 2)
+				{
+					cout << "*";
+				}
+				else
+				{
+					if (l == 0 || l == i || l == n / 2 || l == n - i - 1 || l == n - 1)
+					{
+						cout << "*";
+					}
+					else
+					{
+						cout << " ";
+					}
+				}
+			}
+
+			cout << endl;
+		}
+	}
+}
